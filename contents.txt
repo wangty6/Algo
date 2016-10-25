@@ -1,0 +1,54 @@
+# Any line followed by a '#' character is ignored
+# Section headings must be in square brackets
+# Subsections within a section should follow the format:
+#   [filename within code directory][tab character \t][subsection title]
+
+[Others]
+init.cpp	Initial
+BigInteger.cpp	BigInteger
+CountingColors.cpp	Counting Colors
+CountingSort.cpp	Counting Sort
+dicretize.cpp	Dicretization
+fraction&powersum.cpp	Quick Powersum
+liner_bound+fast_read.cpp	Linear Bound
+Matrix&QuickPower.cpp	Matrix Op
+Mode.cpp	Maintaince Mode
+[DataStructure]
+chairtree.cpp	Functional Segment Tree
+HeavyLightDecomposition.cpp	Heavy Light Decomposition of Tree
+LCT.cpp	Link Cut Tree
+MonotonousQueue.cpp	Monotonous Queue
+BIT-sumseek.cpp	BIT and Sum-Seek
+bitofchairtree.cpp	Functional Segment Tree(Change Support)
+SegTree.cpp	Segment	Tree
+Splay-Remove.cpp	Splay
+Splay-Sequence-SplitMerge.cpp	Splay(Split-Merge)
+zkw-segtree.cpp	ZKW Segment Tree
+[DynamicProgramming]
+MultiPackage.cpp	MultiPackage(Linear Time)
+[Geometry]
+Geo.cpp	Geo Basic
+circlescan.cpp	Circle Scan
+segscan.cpp	Segment Scan
+[GraphTheory]
+costflow.cpp	Minimun Cost Flow(SPFA)
+dinic.cpp	Maximum Flow(Dinic)
+Hungary.cpp	Biparty Maximum Match
+km.cpp	Biparty Maximum Cost Match
+kruscal.cpp	Minimun Spanning Tree
+scc.cpp	Strongly Connected Component
+[NumberTheory]
+sieve.cpp	Sieve for Prime
+quadratic.cpp	Quadratic Remander
+primitive.cpp	Primitive Root
+log.cpp	Logorithm in Mod
+binominal.cpp	Binominal Number from Bell
+[String]
+HASH.cpp	Hash
+PAM.cpp	Palidrome Automaton
+SAM.cpp	Suffix Automaton
+extendSAM.cpp	Extended Suffix Automaton
+[TreeTheory]
+LCA.cpp	Lower Common Ancestor
+Divide&Conquer.cpp	Divide and Conquer
+

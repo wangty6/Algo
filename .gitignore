@@ -1,3 +1,14 @@
+# LaTeX Compiled files
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.out.bak
+*.gz
+*.tex.bak
+*.toc
+
 # Compiled Object files
 *.slo
 *.lo

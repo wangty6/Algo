@@ -1,0 +1,4 @@
+* Write a faster FFT code.
+* Add fast Hadamard transform for solving the following problem:
+    Given A[], B[], find C[] such that
+      C[i] = sum_j A[j] B[i xor j]
