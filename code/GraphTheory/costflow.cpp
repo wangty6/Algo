@@ -3,8 +3,8 @@ struct Flow {
 	typedef LL int;
 	const int INF = 0x3f3f3f3f;
 	int key[M], next[M], head[N], cnt, f[M];
-	int pe[N], pv[N], S, T;
-	int  q[N];
+	int pe[N], pv[N];
+	int  q[6001000];
 	LL dis[N], cost[M];
 	bool vis[N];
 	void init() {
@@ -25,7 +25,7 @@ struct Flow {
 		head[y] = cnt ++;
 	}
 	bool spfa() {
-		rep(i, S, T) dis[i] = INF;
+		rep(i, S, T) dis[i] = INF;/* fuck */
 		memset (vis, 0, sizeof vis);
 		int h = 1, t = 2;
 		q[1] = S;
