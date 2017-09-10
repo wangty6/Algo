@@ -6,7 +6,7 @@ void add(int x, int y) {
 	head[x] = cnt++;
 }
 struct LCA {
-	int f[N][25], d[N], q[N];
+	int f[N][21], d[N], q[N];
 	void BFS(int S) {
 		int h = 1, t = 2, u;
 		q[1] = S;
