@@ -1,0 +1,104 @@
+#define left lft
+const int N = 10010;
+bool vis[N], vis2[N];
+int lnk[N], left[N];
+int black_cnt = 0, white_cnt = 0;
+
+int key[N], next[N], head[N], cnt;
+void add(int x, int y)
+{
+	key[cnt] = y;
+	next[cnt] = head[x];
+	head[x] = cnt ++;
+}
+
+bool DFS (int u)
+{
+	vis2[u] = true;
+	for (int i = head[u]; ~ i; i = next[i])
+	{
+		int v = key[i];
+		if (vis[v]) continue;
+		vis[v] = true;
+		if (lnk[v] == -1 || DFS(lnk[v]))
+		{
+			lnk[v] = u;
+			left[u] = v;
+			return true;
+		}
+	}
+	return false;
+}
+ 
+int hungary ()
+{
+	int ans (0);
+	memset (lnk, -1, sizeof lnk);
+	for (int i = 1; i <= black_cnt; i ++)
+	{
+		memset (vis, 0, sizeof vis);
+		if (DFS (i))
+			ans ++;
+	}
+	return ans;
+}
+map<string, int> black, white;
+vector<int> black_vec[N], white_vec[N];
+char str[1010];
+bool printed[N];
+
+int main()
+{
+	from("heavy.in");
+	//to("heavy.out");
+	
+	cnt = 0;
+	memset (head, -1, sizeof head);
+	
+	int n, k;
+	scanf("%d%d", &n, &k);
+
+	int ans = hungary();
+	printf("%d\n", ans);
+	memset(vis, 0, sizeof vis);
+	memset(vis2, 0, sizeof vis2);
+	rep(i, 1, black_cnt)
+	{
+		if (left[i] == 0)
+		{
+			DFS(i);
+		}
+	}
+	int line = 0, node = 0;
+	rep(i, 1, black_cnt)
+	{
+		if (vis2[i] == 0)
+		{
+			vector<int> que;
+			for (int x : black_vec[i])
+			{
+				if (!printed[x])
+				{
+					printed[x] = true;
+					que.push_back(x);
+				}
+			}
+		}
+	}
+	rep(i, 1, white_cnt)
+	{
+		if (vis[i] == 1)
+		{
+			vector<int> que;
+			for (int x : white_vec[i])
+			{
+				if (!printed[x])
+				{
+					printed[x] = true;
+					que.push_back(x);
+				}
+			}
+		}
+	}
+	return 0;
+}
